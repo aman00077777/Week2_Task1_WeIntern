@@ -1,6 +1,6 @@
-# DevHelper AI – Coding & Technical Support Chatbot
+# CodePulse AI – Interactive Coding & Developer Assistant
 
-DevHelper is a premium, responsive AI Chatbot designed to help developers learn coding concepts, write databases queries, utilize version control, debug errors, and prepare for software engineering interviews. 
+CodePulse is a premium, responsive AI Chatbot designed to help developers learn coding concepts, write database queries, utilize version control, debug errors, and prepare for software engineering interviews. 
 
 It is powered by a local Natural Language Processing (NLP) classifier built on top of `scikit-learn` (using TF-IDF feature extraction and Logistic Regression classification, combined with Cosine Similarity and Out-of-Vocabulary (OOV) checks for maximum classification accuracy).
 
@@ -9,10 +9,10 @@ It is powered by a local Natural Language Processing (NLP) classifier built on t
 ## Features
 
 1. **Dual Interfaces**: 
-   - **Premium Glassmorphic Web App**: A dark-theme, blur-filtered UI with code-syntax highlighting, dynamic typing bubbles, active context stats, session logs, and a downloadable transcript feature.
+   - **Premium Emerald Glassmorphic Web App**: A dark-theme, blur-filtered UI with code-syntax highlighting, dynamic typing bubbles, active context stats, session logs, and a downloadable transcript feature.
    - **CLI Console Application**: A direct interactive shell within your terminal window.
 2. **11 Supported Intents**: Custom training dataset spanning greetings, coding help, specific technologies, multi-turn code samples, and elaborate explanations.
-3. **Context-Aware Multi-Turn Support**: Remembers conversational states (e.g. asking for "Python Basics" and then "give me an example" triggers a Python code block; asking for "Git Basics" followed by "give me an example" shows git terminal instructions).
+3. **Context-Aware Multi-Turn Support**: Remembers conversational states (e.g., asking for "Python Basics" and then "give me an example" triggers a Python code block; asking for "Git Basics" followed by "give me an example" shows Git terminal instructions).
 4. **Out-of-Vocabulary (OOV) Fallback Engine**: If a user enters off-topic content (e.g., "how do I bake cookies"), the model computes the percentage of unrecognized words and redirects to a friendly fallback assistant prompt.
 5. **Zero-Bytecode Flag Configured**: Environment checks clean up and bypass creating `__pycache__` folders.
 
@@ -44,14 +44,14 @@ To launch the Web app:
 ```powershell
 # Set environment to prevent python bytecode caching
 $env:PYTHONDONTWRITEBYTECODE=1
-.venv\Scripts\python -B app.py
+python app.py
 ```
 Open your browser and navigate to: **`http://127.0.0.1:5000`**
 
 ### Interface 2: Interactive Terminal (CLI)
 To run directly in your console:
 ```powershell
-.venv\Scripts\python -B chatbot.py
+python chatbot.py
 ```
 
 ---
@@ -62,7 +62,7 @@ We have provided a comprehensive verification script containing 22 diverse test 
 
 To execute the test table:
 ```powershell
-.venv\Scripts\python -B test_chatbot.py
+python test_chatbot.py
 ```
 
 ---
@@ -73,7 +73,7 @@ To execute the test table:
 | :--- | :--- | :--- | :--- |
 | `greeting` | None | "hello", "hi", "yo", "good morning" | Conversational chatbot introduction |
 | `goodbye` | Clears Context | "bye", "see you later", "exit", "quit" | Closing remarks |
-| `bot_identity` | None | "who are you", "what is your name" | Explains DevHelper's features & identity |
+| `bot_identity` | None | "who are you", "what is your name" | Explains CodePulse's features & identity |
 | `help` | None | "help", "what can you do", "features" | Displays the help directory |
 | `python_basics` | `python_context` | "explain python", "learn python" | High-level overview of Python features |
 | `git_basics` | `git_context` | "how to use git", "git commands" | Version control commands and structure |

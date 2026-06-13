@@ -1,0 +1,224 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "greetings",
+        "howdy",
+        "is anyone there",
+        "good morning",
+        "good afternoon",
+        "yo"
+      ],
+      "responses": [
+        "Welcome to CodePulse! How can I assist you with your coding questions today?",
+        "Hello! What programming challenges are we tackling today?",
+        "Hey! Ready to dive into some code or resolve developer issues?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you later",
+        "exit",
+        "quit",
+        "talk to you later",
+        "i am leaving"
+      ],
+      "responses": [
+        "Take care! Happy coding!",
+        "Goodbye! Let me know if you need help with anything else later.",
+        "See you next time. Keep building amazing software!"
+      ],
+      "context_clear": true
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": [
+        "who are you",
+        "what is your name",
+        "are you a bot",
+        "tell me about yourself",
+        "what do you do"
+      ],
+      "responses": [
+        "I am CodePulse AI, a smart assistant designed for developer support. I'm ready to explain coding concepts, walk you through databases, show Git instructions, and debug your code!"
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "what can you do",
+        "how does this work",
+        "commands",
+        "show features",
+        "list options",
+        "what features do you support",
+        "what do you support",
+        "features"
+      ],
+      "responses": [
+        "I can help you with a variety of topics! Try asking me about:\n- **Python Basics**: e.g., 'How do I start with Python?'\n- **Git Version Control**: e.g., 'How to use Git commands'\n- **SQL Databases**: e.g., 'What is a SQL query?'\n- **APIs & REST**: e.g., 'Explain how APIs work'\n- **Frontend vs Backend**: e.g., 'What is the difference between client and server?'\n- **Code Debugging**: e.g., 'How to debug code issues?'\n- **Interview Prep**: e.g., 'Tips for a programming interview'\n\nYou can also ask follow-up questions like 'give me an example' or 'tell me more' after we start a topic!"
+      ]
+    },
+    {
+      "tag": "python_basics",
+      "patterns": [
+        "how do i learn python",
+        "explain python",
+        "what is python",
+        "tell me about python variables",
+        "python programming language",
+        "python syntax",
+        "basics of python"
+      ],
+      "responses": [
+        "Python is an interpreted, high-level language celebrated for its developer productivity, clean syntax, and readability. It's a standard choice for machine learning, data engineering, web backends, and scripting."
+      ],
+      "context_set": "python_context"
+    },
+    {
+      "tag": "git_basics",
+      "patterns": [
+        "how do i use git",
+        "explain git",
+        "what is git",
+        "git commands",
+        "how to commit in git",
+        "version control basics",
+        "git push",
+        "git branch"
+      ],
+      "responses": [
+        "Git is a decentralized version control tool that records file changes over time. It lets teams collaborate seamlessly, isolate features using branches, and roll back code to previous states."
+      ],
+      "context_set": "git_context"
+    },
+    {
+      "tag": "api_basics",
+      "patterns": [
+        "what is an api",
+        "explain rest api",
+        "how do apis work",
+        "http methods",
+        "get and post requests",
+        "web api"
+      ],
+      "responses": [
+        "An API (Application Programming Interface) is a bridge that lets applications share data and functionalities. REST (Representational State Transfer) is a lightweight standard for web APIs, typically relying on HTTP requests like GET and POST."
+      ],
+      "context_set": "api_context"
+    },
+    {
+      "tag": "sql_queries",
+      "patterns": [
+        "what is sql",
+        "database query",
+        "how to write sql query",
+        "sql select",
+        "databases and tables",
+        "join tables in sql"
+      ],
+      "responses": [
+        "SQL (Structured Query Language) is the standard query language used to communicate with relational databases. It lets you write queries to fetch records (SELECT), create new records (INSERT), update fields (UPDATE), or remove entries (DELETE)."
+      ],
+      "context_set": "sql_context"
+    },
+    {
+      "tag": "frontend_vs_backend",
+      "patterns": [
+        "frontend vs backend",
+        "what is the difference between frontend and backend",
+        "client vs server",
+        "web development",
+        "fullstack"
+      ],
+      "responses": [
+        "Frontend refers to client-facing components (HTML, CSS, JavaScript) that render inside the browser. Backend refers to server-side operations handling databases, servers, APIs, and business logic (using Python, Node.js, etc.)."
+      ],
+      "context_set": "webdev_context"
+    },
+    {
+      "tag": "debug_code",
+      "patterns": [
+        "how do i fix a bug",
+        "fix my code",
+        "why is my code broken",
+        "syntax error",
+        "how to debug python error",
+        "runtime exception",
+        "code debugging steps"
+      ],
+      "responses": [
+        "Debugging involves finding and fixing errors in code. Best practices: 1) Study the stack trace and line numbers. 2) Insert prints or logs to inspect variables. 3) Isolate components. 4) Use breakpoints or debugger utilities."
+      ],
+      "context_set": "debug_context"
+    },
+    {
+      "tag": "interview_tips",
+      "patterns": [
+        "prep for coding interview",
+        "how to prepare for technical interview",
+        "coding interview tips",
+        "data structures and algorithms prep",
+        "software engineering interview"
+      ],
+      "responses": [
+        "To prepare for technical interviews: 1) Understand core data structures (linked lists, maps, trees) and algorithms. 2) Solve coding exercises on platforms like LeetCode. 3) Practice thinking out loud. 4) Verify boundary and edge cases."
+      ],
+      "context_set": "interview_context"
+    },
+    {
+      "tag": "context_example",
+      "patterns": [
+        "give me an example",
+        "show example",
+        "code sample",
+        "show me code",
+        "example of this",
+        "can you write an example"
+      ],
+      "responses": [
+        "What kind of example would you like to see? I can provide code samples for Python, Git, SQL, APIs, or Web Dev."
+      ],
+      "context_responses": {
+        "python_context": "Here is a simple example of a Python function:\n```python\ndef greet_user(username):\n    \"\"\"Greets the user by name.\"\"\"\n    return f\"Welcome, {username}!\"\n\n# Run the function\nprint(greet_user(\"Alice\"))\n```",
+        "git_context": "Here is a typical Git workflow example:\n```bash\n# Initialize repository\ngit init\n\n# Add files to staging area\ngit add .\n\n# Commit files\ngit commit -m \"feat: initialize app\"\n\n# Push to master/main branch\ngit push origin main\n```",
+        "api_context": "Here is a sample JSON response payload from a REST endpoint:\n```json\n{\n  \"status_code\": 200,\n  \"message\": \"Data retrieved successfully\",\n  \"result\": {\n    \"item_id\": 456,\n    \"name\": \"Premium Subscription\",\n    \"active\": true\n  }\n}\n```",
+        "sql_context": "Here is an SQL JOIN query example:\n```sql\nSELECT employees.first_name, departments.name AS dept_name, employees.salary\nFROM employees\nINNER JOIN departments ON employees.dept_id = departments.id\nWHERE employees.status = 'Active'\nORDER BY employees.salary DESC;\n```",
+        "webdev_context": "Here is a simple HTML component with styled CSS:\n```html\n<div class=\"info-card\">\n  <h2>CodePulse</h2>\n  <p>Learn coding step by step.</p>\n</div>\n\n<style>\n  .info-card {\n    background: rgba(0, 0, 0, 0.1);\n    border: 1px solid rgba(255, 255, 255, 0.2);\n    padding: 15px;\n    border-radius: 12px;\n  }\n</style>\n```",
+        "debug_context": "Here is a Python example of exception handling using try/except:\n```python\ntry:\n    calculation = 50 / 0\nexcept ZeroDivisionError as error:\n    print(f\"An error occurred: {error}\")\n    # Resolve or log gracefully\n```",
+        "interview_context": "Here is an example of solving the classic 'Reverse String' problem in-place:\n```python\ndef reverse_string(s):\n    left, right = 0, len(s) - 1\n    while left < right:\n        s[left], s[right] = s[right], s[left]\n        left += 1\n        right -= 1\n    return s\n```"
+      }
+    },
+    {
+      "tag": "context_more",
+      "patterns": [
+        "tell me more",
+        "explain further",
+        "go deeper",
+        "details",
+        "elaborate",
+        "tell me details"
+      ],
+      "responses": [
+        "What specific details are you interested in? I can provide more details on Python, Git, SQL, APIs, Web Dev, debugging, or coding interviews."
+      ],
+      "context_responses": {
+        "python_context": "Python uses indentation (whitespace) to structure code blocks instead of braces. Because of its dynamic typing and extensive standard libraries, it is highly productive. Popular frameworks include Flask or FastAPI for APIs, and Pandas/scikit-learn for ML.",
+        "git_context": "Git uses a directed acyclic graph (DAG) structure to track commits. The three main stages of Git files are:\n- **Working Tree**: Files you are currently editing.\n- **Staging Area (Index)**: Files marked to go into the next commit.\n- **Git Directory**: Where history and metadata are stored.",
+        "api_context": "REST stands for Representational State Transfer. Key ideas are:\n- **Statelessness**: No client session state is saved on the server.\n- **Resource-Based**: Endpoints use nouns (e.g. `/api/v1/users`) representing resources.\n- **Standard HTTP codes**: Returns standard status codes (200 OK, 201 Created, 400 Bad Request, 500 Server Error).",
+        "sql_context": "Important intermediate concepts in SQL include:\n- **Joins**: Combining rows using matching keys.\n- **Aggregations**: Using GROUP BY and functions like SUM() or COUNT() to summarize rows.\n- **Indexes**: Specialized database structures to locate records fast.\n- **Transactions**: Logical units of work enforcing ACID guarantees.",
+        "webdev_context": "Web applications utilize a client-server architecture. The browser requests static assets and communicates dynamically with the backend API. Database management and heavy computing are handled on the server side to protect secrets and ensure scaling.",
+        "debug_context": "Advanced debugging techniques:\n1. **Structured Logging**: Using standard `logging` with severity levels (INFO, WARNING, ERROR).\n2. **Breakpoints**: Pausing execution dynamically with `breakpoint()` or IDE debuggers.\n3. **Unit Testing**: Writing tests to catch regressions before deploying.",
+        "interview_context": "When interviewing, explain your code clearly. Follow this framework:\n1. **Clarify**: Confirm problem limits and assumptions (e.g. scale of data, empty inputs).\n2. **Brute Force**: State the simple solution first, then talk about improvements.\n3. **Optimize**: Use better algorithms/hash tables to improve complexity.\n4. **Code**: Write structured, clean code.\n5. **Dry Run**: Trace execution with a small test input."
+      }
+    }
+  ]
+}
